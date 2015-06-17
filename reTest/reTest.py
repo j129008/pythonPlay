@@ -1,8 +1,6 @@
 # coding: utf-8
-# %load reTest.py
 import re
 
-s1 = "hello world"
-s2 = "world"
-match = re.search(s2, s1)
+s1 = "hello world1, world2, world3"
+match = re.search("world.", s1)
 print(match.group())
