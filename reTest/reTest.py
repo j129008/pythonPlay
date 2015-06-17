@@ -2,5 +2,5 @@
 import re
 
 s1 = "hello world1, world2, world3"
-match = re.search("world.", s1)
-print(match.group())
+p = re.compile("world\d")
+print (p.findall(s1))
