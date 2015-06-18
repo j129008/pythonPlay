@@ -23,10 +23,11 @@ def printme7(filename, keyword):
 
 def countJJ(filename, keyword):
     inFile = open(filename,"r",encoding="UTF-8")
+    list = []
     for line in inFile:
         if (keyword in line ):
             p = re.compile("JJ[\s]+([^\)]+)")
             list.append( p.search(line).group(1) )
-            cnt = Counter(list)
-            print(list)
+    cnt = Counter(list)
+    print(cnt)
     inFile.close()
