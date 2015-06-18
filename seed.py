@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 import re
 import sys
+from collections import Counter
 def printme(filename, endline):
     inFile = open(filename,"r",encoding="UTF-8")
     i = 0
@@ -25,5 +26,7 @@ def countJJ(filename, keyword):
     for line in inFile:
         if (keyword in line ):
             p = re.compile("JJ[\s]+([^\)]+)")
-            print (p.search(line).group(1) )
+            list.append( p.search(line).group(1) )
+            cnt = Counter(list)
+            print(list)
     inFile.close()
