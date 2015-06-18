@@ -1,3 +1,6 @@
+from collections import Counter
 list = [ "fuck" ]
-list.append("fuck2")
-print(list[1])
+list.append("fuck")
+list.append("fuck")
+list.append("fuck")
+print(Counter(list))
