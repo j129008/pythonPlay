@@ -24,5 +24,6 @@ def countJJ(filename, keyword):
     inFile = open(filename,"r",encoding="UTF-8")
     for line in inFile:
         if (keyword in line ):
-            print(line)
+            p = re.compile("JJ[\s]+([^\)]+)")
+            print (p.search(line).group(1) )
     inFile.close()
